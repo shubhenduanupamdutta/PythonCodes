@@ -1,0 +1,14 @@
+body {
+    background-color: aliceblue;
+}
+
+@media (min-width: 600px) {
+    .form-fields {
+        width: 75%
+    }
+}
+@media (min-width: 1000px) {
+    .form-fields {
+        width: 40%
+    }
+}

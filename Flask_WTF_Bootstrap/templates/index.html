@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block head %} Secrets {% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome</h1>
+    <p>Are you ready to discover my secret?</p>
+    <button class="btn btn-primary btn-lg" onclick='location.href="{{ url_for('login') }}"'>Login</button>
+  </div>
+</div>
+{%  endblock %}

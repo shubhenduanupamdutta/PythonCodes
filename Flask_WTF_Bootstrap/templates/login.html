@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block head %}Login {% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1>Login</h1>
+  <!-- This is where our form will go. -->
+{#  <form method="post" action="{{ url_for('login') }}" novalidate>#}
+{#    {{ form.csrf_token }}#}
+{#    <p>#}
+{#      {{ form.email.label }} <br>#}
+{#      {{ form.email(size=30, placeholder="Email") }}#}
+{#      {% for error in form.email.errors %}#}
+{#        <span style="color:red; font-weight: bold;">{{ error }}</span>#}
+{#      {% endfor %}#}
+{#    </p>#}
+{#    <p>#}
+{#      {{ form.password.label }} <br>#}
+{#      {{ form.password(size=30) }}#}
+{#      {% for error in form.password.errors %}#}
+{#        <span style="color:red; font-weight: bold;">{{ error }}</span>#}
+{#      {% endfor %}#}
+{#    </p>#}
+    {#    {{ form.name.label }} {{ form.name(size=30) }}#}
+{#    {{ form.submit }}#}
+{#  </form>#}
+  {% from 'bootstrap/form.html' import render_form %}
+  {{ render_form(form, action=url_for('login'))}}
+</div>
+{% endblock %}

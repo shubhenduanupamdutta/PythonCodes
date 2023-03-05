@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block head %}{% endblock %}</title>
+  {{ bootstrap.load_css() }}
+  <link rel="stylesheet" href="../static/styles.css">
+  </style>
+</head>
+<body>
+  {% block body %}{% endblock %}
+  {% block scripts %}
+    {{ bootstrap.load_js() }}
+  {% endblock %}
+</body>
+</html>

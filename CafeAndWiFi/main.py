@@ -10,8 +10,7 @@ app = Flask(__name__)
 app.secret_key = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 bootstrap = Bootstrap5(app)
 
-csv_file_path = os.path.abspath(
-    os.path.join("G:/Video Lectures/100DaysToCode/pythonProject/CoffeeAndWifi_WTF_BS5", 'cafe-data.csv'))
+csv_file_path = os.path.abspath(os.path.join(os.getcwd(), 'cafe-data.csv'))
 
 
 def ratings_list(symbol: str) -> list:

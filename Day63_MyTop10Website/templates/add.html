@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+  <style>
+    form {
+        padding-top: 10%;
+    }
+  </style>
+{% endblock %}
+
+{% block title %}Add Movie{% endblock %}
+{% block content %}
+<div class="content">
+    <h1 class="heading">Add a Movie</h1>
+    <br><br>
+    {{ render_form(form) }}
+</div>
+{% endblock %}

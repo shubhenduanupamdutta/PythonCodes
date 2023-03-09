@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+{% endblock %}
+
+{% block title %}Select Movie{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="heading">Select Movie</h1>
+    {% for movie in movies %}
+      <a href="{{ url_for('add_movie', id=movie.id) }}">
+        <table style="width:40%; padding-top:20px;">
+          <tr>
+            <td>
+              <img src="https://www.themoviedb.org/t/p/original/{{ movie.poster_path }}" width="30%">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{ movie.original_title }} - {{ movie.release_date }}
+            </td>
+          </tr>
+        </table>
+      </a>
+    {% endfor %}
+
+  </div>
+{% endblock %}

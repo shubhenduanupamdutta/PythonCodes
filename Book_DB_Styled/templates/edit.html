@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block head %} Edit Rating {% endblock %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+      @media (min-width: 600px) {
+            .wrapper-change {
+                padding: 0 20% 0 20%;
+      }
+      }
+
+      #book-details, .rating {
+          padding-bottom: 0;
+          padding-left: 3%;
+      }
+
+      h2 {
+          text-decoration:underline;
+          color: cadetblue;
+          padding-bottom: 3%;
+          text-align: center;
+      }
+      h5 {
+          margin: 1% auto 1%;
+          padding-right: 5%
+      }
+
+      .rating {
+          padding-top: 3%;
+          font-size: 1.2rem;
+      }
+
+      form {
+          width: 210px;
+          padding: 0;
+      }
+
+      form label {
+          font-size: 1.3rem;
+          font-weight: bold;
+          color: blue;
+          margin-bottom: 3px;
+      }
+
+      .form-wrapper {
+          padding-left: 3%;
+          padding-top: 5px;
+      }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="wrapper-change">
+  <section id="book-details">
+  <h2> Change Rating </h2>
+  <h4>Book Details:</h4>
+  <h5>Title: {{ book.title }}</h5> <h5>Author: {{ book.author }}</h5>
+  </section>
+
+  <h4 class="rating">Current Rating: {{ book.rating }}</h4>
+  <div class="form-wrapper">
+    {% from 'bootstrap/form.html' import render_form %}
+    {{ render_form(form, action=url_for('edit_rating', book_id=book.id), button_style=primary,
+        button_size=lg, id="add-book", novalidate=True) }}
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %} Add New Book {% endblock %}
+
+{% block styles %}
+  {{ super() }}
+  <style>
+
+    header h2 {
+        text-align: center;
+        color: cadetblue;
+        text-decoration: underline;
+        padding-bottom: 3%;
+    }
+
+    .add-book {
+        width: 100%;
+        margin: 10px auto;
+        font-size: 1.3rem;
+    }
+
+    #add-book {
+        font-size: 1.2rem;
+    }
+
+  </style>
+{% endblock %}
+
+{% block content %}
+  <header>
+    <h2> Add a new book</h2>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% for category, message in messages %}
+    <div class="{{ category }}">{{ message }}</div>
+  {% endfor %}
+  {% endwith %}
+  <div class="container">
+  {% from 'bootstrap/form.html' import render_form %}
+    {{ render_form(form, action=url_for('add_book'), button_style=primary,
+        button_size=lg, id="add-book", novalidate=True) }}
+  </div>
+{% endblock %}

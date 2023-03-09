@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% block head %}{% endblock %}</title>
+  <script src="https://kit.fontawesome.com/e8f916ca47.js" crossorigin="anonymous"></script>
+  {% block styles %}
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet" href="../static/styles.css">
+  {% endblock %}
+</head>
+<body>
+{# Content of the body#}
+{% block content %}{% endblock %}
+
+<footer>
+  <p>&copy; Shubhendu A Dutta, {{ year }} <br> Made with Bootstrap 5.2.2, Flask and Extensions</p>
+</footer>
+{# Content of the scripts#}
+{% block scripts %}
+  {{ bootstrap.load_js() }}
+{% endblock %}
+</body>
+</html>

@@ -1,3 +1,5 @@
+# sorry its day64, I am not renaming this folder, otherwise links to the repository will fail.
+
 # Day63 code for 100DaysOfCode, python BootCamp by Angela@AppBrewery
 ## I have used latest modules/frameworks and libaries
 

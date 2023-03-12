@@ -35,7 +35,10 @@ class BlogPost(db.Model):
     body = db.Column(db.Text, nullable=False)
     author = db.Column(db.String(250), nullable=False)
     img_url = db.Column(db.String(250), nullable=False)
-
+    
+# We didn't need to create_database since the database was provided. That's why this code is not used.
+# with app.app_context():
+#     db.create_all()
 
 ##WTForm
 class CreatePostForm(FlaskForm):

@@ -13,3 +13,5 @@
 - sort_values()
 ## How to group by category
 - groupby()
+## Insertion of a column into dataframe
+- insert()

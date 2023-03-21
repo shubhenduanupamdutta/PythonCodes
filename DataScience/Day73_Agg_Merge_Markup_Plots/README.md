@@ -1,8 +1,8 @@
 # Learned
 
 ## How to combine a Notebook with HTML markup
-- adding image using <img src="linkToImage">
-- lists using <ul> <li> 1 </li> <li> 2 </li> </ul>
+- adding image using '<img src="linkToImage">'
+- 'lists using <ul> <li> 1 </li> <li> 2 </li> </ul>'
 
 ## Some new methods useful in data exploration
 - nunique()  Counts number of unique objects in data
